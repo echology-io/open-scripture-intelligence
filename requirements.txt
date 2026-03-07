@@ -1,8 +1,0 @@
-# Core (no dependencies needed for parsing)
-# parse_markdown.py - stdlib only
-# build_chunks.py - stdlib only
-# build_graph.py - stdlib only
-
-# Embeddings (choose one)
-openai>=1.0.0        # For OpenAI embeddings
-# sentence-transformers>=2.0.0  # For local embeddings (uncomment if needed)
