@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.DS_Store
+
+# Generated data — regenerate with scripts (see README)
+embeddings/
+canonical/verses.jsonl
+canonical/chapters.jsonl
+chunks/
+graph/edges.jsonl
+graph/nodes.jsonl
+graph/cross_references.txt
+graph/cross_references_raw.txt

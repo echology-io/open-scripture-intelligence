@@ -1,0 +1,21 @@
+---
+translation: KJV
+book: psalms
+chapter: 67
+---
+
+# Psalms 67
+
+67:1 [To the chief Musician on Neginoth, A Psalm or Song.] God be merciful unto us, and bless us; and cause his face to shine upon us; Selah. chief...: or, overseer upon: Heb. with
+
+67:2 That thy way may be known upon earth, thy saving health among all nations.
+
+67:3 Let the people praise thee, O God; let all the people praise thee.
+
+67:4 O let the nations be glad and sing for joy: for thou shalt judge the people righteously, and govern the nations upon earth. Selah. govern: Heb. lead
+
+67:5 Let the people praise thee, O God; let all the people praise thee.
+
+67:6 Then shall the earth yield her increase; and God, even our own God, shall bless us.
+
+67:7 God shall bless us; and all the ends of the earth shall fear him.
