@@ -20,6 +20,7 @@ requirements.txt
 CONTRIBUTING.md
 
 # Raw source data
+source/
 graph/cross_references.txt
 graph/cross_references_raw.txt
 
