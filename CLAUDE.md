@@ -43,8 +43,31 @@ This data is meant to be consumed by other echology systems:
 - **Schema stability.** The JSONL schemas are consumed downstream. Do not change field names or structure without coordinating with consumers.
 - **This is not an app.** Do not add a server, API, or frontend. This is a dataset. Other projects consume it.
 
+## Pipeline Integration
+
+Scripture data runs through the shared echology engine (`~/echology/engine/`) via the scripture domain module:
+
+```bash
+cd ~/echology/open-scripture
+source ~/echology/aecai/.venv/bin/activate   # needs engine installed
+python scripts/ingest.py --book john          # 286 passages, outputs/john.jsonl
+python scripts/ingest.py --all                # all 9,971 passages
+```
+
+- `scripture_domain.py` — Domain config: 8 theological disciplines, biblical reference regex, authority signals
+- `scripts/ingest.py` — Sets `ECHOLOGY_DOMAIN=scripture`, loads passages, runs through VantaPipeline
+- `outputs/` — Generated JSONL results (gitignored)
+
+### Results (Gospel of John, 286 passages, 2026-03-11)
+
+- 264/286 passages classified with theological disciplines (gospel, law, epistle, prophecy, etc.)
+- Zero AEC contamination
+- Zero errors
+- Discipline detection driven by KJV vocabulary: "believeth", "begotten", "son of god", "grace", "moses", "commandment"
+- Entity extraction (scripture references) designed for commentary/study notes that cite passages, not the text itself
+
 ## Next Steps
 
-- Integration with aecai/Qdrant vector pipeline for Scripture semantic search.
-- Use as training corpus for echology model.
-- decompose classification of Scripture text (authority patterns in prophetic, legal, narrative, wisdom literature).
+- Qdrant vector indexing for Scripture semantic search
+- Training corpus for echology model
+- decompose classification of Scripture text (authority patterns in prophetic, legal, narrative, wisdom literature)

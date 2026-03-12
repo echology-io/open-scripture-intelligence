@@ -26,3 +26,6 @@ graph/cross_references_raw.txt
 
 # Embeddings too large for git
 embeddings/
+
+# Pipeline outputs (generated)
+outputs/
