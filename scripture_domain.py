@@ -139,15 +139,19 @@ EXTRA_DOCUMENT_TYPES = {
     "genealogy",
 }
 
-STANDARD_REFERENCE_PATTERNS = [
-    r"\b(?:[123]\s*)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth"
-    r"|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs"
-    r"|Ecclesiastes|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel"
-    r"|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah"
-    r"|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians"
-    r"|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus"
-    r"|Philemon|Hebrews|James|Peter|Jude|Revelation)\s+\d{1,3}(?:\s*:\s*\d{1,3})?",
-]
+import re as _re
+
+STANDARD_REFERENCE_PATTERNS = {
+    "bible_reference": _re.compile(
+        r"\b(?:[123]\s*)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth"
+        r"|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs"
+        r"|Ecclesiastes|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel"
+        r"|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah"
+        r"|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians"
+        r"|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus"
+        r"|Philemon|Hebrews|James|Peter|Jude|Revelation)\s+\d{1,3}(?:\s*:\s*\d{1,3})?"
+    ),
+}
 
 USE_AEC_SCHEMA_EXTENSION = False
 
